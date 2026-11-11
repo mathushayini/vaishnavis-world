@@ -1,0 +1,10 @@
+Put your personal files in this folder:
+memory-1.jpeg
+memory-2.png
+memory-3.png
+memory-4.png
+birthday-song.mpeg
+video-message.mp4
+vaishu-edited-video.mp4
+homepage-animation.mp4
+vaishu-voice-message.mp3 (up to 5 minutes)
