@@ -81,7 +81,6 @@ function App() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [videoMissing, setVideoMissing] = useState(false);
   const [giftVideoMissing, setGiftVideoMissing] = useState(false);
-  const [voiceMessageError, setVoiceMessageError] = useState("");
   const [letterOpen, setLetterOpen] = useState(false);
   const [letterStage, setLetterStage] = useState("envelope");
   const [giftOpen, setGiftOpen] = useState(false);
@@ -260,27 +259,6 @@ function App() {
             <p>May your 23rd chapter be filled with laughter, lovely surprises, and all the happiness your heart can hold. So lucky to call you my best friend! 💗</p>
             <span className="signature">Forever cheering for you · Mathu</span>
           </div>}
-          <div className="voice-message-card">
-            <span className="voice-message-icon"><Music2 size={21}/></span>
-            <div className="voice-message-copy">
-              <strong>A little voice note, just for you 🎙️</strong>
-              <span>Press play whenever you want to hear me say happy birthday.</span>
-            </div>
-            {!voiceMessageError && <audio
-              className="voice-message-player"
-              controls
-              preload="metadata"
-              src="/media/vaishu-voice-message.mp3"
-              onLoadedMetadata={(event) => {
-                if (event.currentTarget.duration > 300) {
-                  event.currentTarget.pause();
-                  setVoiceMessageError("This voice note is longer than 5 minutes. Please use a shorter recording.");
-                }
-              }}
-              onError={() => setVoiceMessageError("Add your voice recording (up to 5 minutes) as vaishu-voice-message.mp3 in public/media.")}
-            />}
-            {voiceMessageError && <p className="voice-message-help" role="status">{voiceMessageError}</p>}
-          </div>
           <a className="primary-btn" href="#memories">Open your birthday surprise <Heart size={17} fill="currentColor"/></a>
           <div className="scroll-note"><ChevronDown size={16}/> SCROLL TO EXPLORE</div>
         </div>
@@ -430,7 +408,7 @@ function App() {
             <p>Enakku nee en bestest friend di. Not just a school friend. Not just someone I have memories with. Nee en life oda oru beautiful part.</p>
             <p>Unakku 23rd year neraya happiness, success, peace, love and unforgettable experiences kondu varanum. Nee aasai padra ella dreams um fulfil aaganum. Un smile eppovume ippadiye irukkanum.</p>
             <p>Innum neraya years kazhiyattum, namma life evlo busy aagattum, chance kidaikkumpothellam meet panni, old memories ah pesi, pudhu memories create pannuvom.</p>
-            <p><strong>Grade 6 la pesa aasai patta ponnu... Grade 10 la close friend aana ponnu... school mudinjum en heart la same place la irukkura ponnu... nee thaan di! 🥹</strong></p>
+            <p><strong>Grade 6 la nan pesi friend ahanum nu ninaicha ponnu... Grade 10 la close friend aana ponnu... school mudinjum en heart la same place la irukkura ponnu... nee thaan di! 🥹</strong></p>
             <p>I don't know how to explain how much I love you and how grateful I am to have you in my life. I love you endlessly, Vaishu. More than these words can ever tell. ❣️</p>
             <p className="signature">With all my love,<br/><strong> Mathu ❤️</strong></p>
           </div>
